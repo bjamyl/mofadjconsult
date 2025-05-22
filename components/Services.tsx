@@ -1,19 +1,87 @@
+"use client";
 import React from "react";
 import SubTitle from "./SubTitle";
 import ServiceCard from "./ServiceCard";
+import { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+
+// import required modules
+import { EffectCards } from "swiper/modules";
+// Services.tsx
 export default function Services() {
   return (
-    <section className="lg:clip-angular-top-curved-bottom bg-cover bg-center pb-20 lg:pb-10">
+    <section className="pb-20 lg:pb-10">
       <div className="flex flex-col items-center pt-20 pb-32">
         <SubTitle title="Services" />
-        <h3 className="mt-10 text-3xl text-center lg:text-5xl font-bold">
+        <h3 className="mt-10 lg:mb-10 mb-5 mx-8 text-3xl text-center lg:text-5xl font-bold">
           Transformative Solutions
         </h3>
-        <div>
-            <ServiceCard alt="image" imageDir="/hero2.jpg" listNumber={2} title="Project Management Consulting"/>
-            <ServiceCard alt="image" imageDir="/hero2.jpg" listNumber={2} title="Project Management Consulting"/>
-
+        <div className="lg:hidden px-8 md:px-24 w-full max-w-[1280px] grid gap-8 lg:gap-10">
+          <ServiceCard
+            alt="image"
+            imageDir="/consult.jpg"
+            listNumber={1}
+            title="Project Management Consulting"
+          />
+          <ServiceCard
+            alt="image"
+            imageDir="/procurement.jpg"
+            listNumber={2}
+            title="Procurement and Logistics"
+          />
+          <ServiceCard
+            alt="image"
+            imageDir="/qs.jpg"
+            listNumber={3}
+            title="Quantity Survey Works"
+          />
+          <ServiceCard
+            alt="image"
+            imageDir="/ms.jpg"
+            listNumber={4}
+            title="MS Project Training"
+          />
+        </div>
+        <div className="hidden lg:block w-full max-w-[1280px]">
+          <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]}>
+            <SwiperSlide>
+              <ServiceCard
+                alt="image"
+                imageDir="/consult.jpg"
+                listNumber={1}
+                title="Project Management Consulting"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ServiceCard
+                alt="image"
+                imageDir="/procurement.jpg"
+                listNumber={2}
+                title="Procurement and Logistics"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ServiceCard
+                alt="image"
+                imageDir="/qs.jpg"
+                listNumber={3}
+                title="Quantity Survey Works"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ServiceCard
+                alt="image"
+                imageDir="/ms.jpg"
+                listNumber={4}
+                title="MS Project Training"
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </section>

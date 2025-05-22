@@ -7,10 +7,10 @@ export default function WhyUs() {
   return (
     <section className="flex flex-col items-center mt-20 mb-32">
       <SubTitle title="Why Choose Us" />
-      <h3 className="mt-10 text-3xl text-center lg:text-5xl font-bold">
-        Expert-Led Solutions for <br /> Transformational Growth
+      <h3 className="mt-10 mx-8 text-3xl text-center lg:text-5xl font-bold">
+        Expert-Led Solutions for <br className="hidden md:block" /> Transformational Growth
       </h3>
-      <div className="mt-5 lg:mt-10 xl:mt-14 grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 lg:px-10 xl:max-w-7xl xl:mx-auto">
+      <div className="mt-5 lg:mt-10 xl:mt-14 grid grid-cols-1 md:grid-cols-2 gap-10 px-8 md:px-24 lg:px-10 xl:max-w-7xl xl:mx-auto">
           {SERVICES.map((service, index) => (
           <Card
             key={index}

@@ -12,8 +12,8 @@ export default function Company() {
     "Integrity and professionalism",
   ];
   return (
-    <section className="lg:clip-angular-top-curved-bottom flex flex-col items-start px-4 bg-defaultGreen py-32">
-      <div className="mx-4 mb-6 lg:hidden ">
+    <section className="flex flex-col items-start px-4 bg-defaultGreen py-32">
+      <div className="mx-4 md:mx-24 mb-6 lg:hidden ">
         <Image
           alt="company"
           src="/company.jpg"
@@ -22,7 +22,7 @@ export default function Company() {
           className="rounded-xl"
         />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 lg:px-10 xl:max-w-7xl xl:mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 md:px-24 lg:px-10 xl:max-w-7xl xl:mx-auto">
         <div className="hidden lg:block">
           <Image
             alt="company"

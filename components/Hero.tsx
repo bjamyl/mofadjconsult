@@ -6,9 +6,9 @@ import { ArrowUpRight } from "lucide-react";
 export default function Hero() {
   return (
     <div className="lg:clip-angular-top-curved-bottom bg-[url('/bg.jpg')] bg-cover bg-center pb-20 lg:pb-10 xl:h-[80vh]">
-      <div className="mx-4 lg:mx-10 pt-20 xl:pt-32 lg:grid lg:grid-cols-2 lg:gap-4 xl:gap-16 xl:max-w-7xl xl:mx-auto">
+      <div className="mx-8 md:mx-24 lg:mx-10 pt-20 xl:pt-32 lg:grid lg:grid-cols-2 lg:gap-4 xl:gap-16 xl:max-w-7xl xl:mx-auto">
         <div>
-          <h1 className=" text-4xl lg:text-5xl xl:text-6xl font-bold">
+          <h1 className=" text-4xl md:text-5xl xl:text-6xl font-bold">
             Maximize Project Success with{" "}
             <span className="text-[#0D6970]">Expert Consulting</span>
           </h1>
