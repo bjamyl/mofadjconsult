@@ -12,7 +12,7 @@ export default function Company() {
     "Integrity and professionalism",
   ];
   return (
-    <section className="flex flex-col items-start px-4 bg-defaultGreen py-32">
+    <section className="flex flex-col items-start px-4 bg-defaultGreen bg-[url('/bgg.jpg')] bg-blend-multiply  bg-cover bg-center  py-32">
       <div className="mx-4 md:mx-24 mb-6 lg:hidden ">
         <Image
           alt="company"

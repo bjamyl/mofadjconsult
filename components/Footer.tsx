@@ -3,7 +3,7 @@ import { ArrowUp, Facebook, Instagram, Linkedin, Send, Twitter } from "lucide-re
 
 export default function Footer() {
   return (
-    <footer className="bg-defaultGreen text-white relative">
+    <footer className="bg-defaultGreen bg-[url('/bgg.jpg')] bg-blend-multiply  bg-cover bg-center  text-white relative">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Our offices */}

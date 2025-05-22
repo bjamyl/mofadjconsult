@@ -18,7 +18,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div className="rounded-2xl flex flex-col lg:h-[650px]  lg:grid lg:grid-cols-2 overflow-hidden">
-      <div className="bg-defaultGreen p-6 lg:p-16 h-1/2 lg:h-full">
+      <div className="bg-defaultGreen bg-[url('/bgg.jpg')] bg-blend-multiply  bg-cover bg-center  p-6 lg:p-16 h-1/2 lg:h-full">
         <p className="text-white text-lg">
           {listNumber}<span className="pt-3 text-gray-400 text-sm">/4</span>
         </p>
