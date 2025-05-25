@@ -11,15 +11,15 @@ export default function Footer() {
             <h3 className="text-xl font-medium mb-6">Our offices</h3>
             <div className="space-y-8">
               <div>
-                <p className="text-gray-200 mb-2">Headquarters - Tamale, Ghana</p>
-                <p className="mb-1">993 Renner Burg, West Rond,</p>
-                <p className="mb-2">MT 94251-030</p>
+                <p className="text-gray-200 mb-2">Headquarters - Adjiringanor, Ghana</p>
+                <p className="mb-1">Salem Estate</p>
+                <p className="mb-2">MV9H+M79, Estate High St, Accra</p>
                 <p>+233 552515269 </p>
               </div>
               <div>
-                <p className="text-gray-200 mb-2">Operations - Tamale Ghana</p>
-                <p className="mb-1">Suite 452 8082 Boner Parge,</p>
-                <p>Elviraton, CA 48998</p>
+                <p className="text-gray-200 mb-2">Operations - Adjiringanor Ghana</p>
+                <p className="mb-1">Salem Estate,</p>
+                <p>MV9H+M79, Estate High St, Accra</p>
               </div>
             </div>
           </div>
@@ -29,35 +29,17 @@ export default function Footer() {
             <h3 className="text-xl font-medium mb-6">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
+                <Link href="/contact" className="hover:text-blue-400 transition-colors">
                   Contact us
                 </Link>
               </li>
+              
               <li>
                 <Link href="#" className="hover:text-blue-400 transition-colors">
-                  Privacy policy
+                 Documents
                 </Link>
               </li>
-              <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
-                  Recognitions
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
-                  Team
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
-                  Blog
-                </Link>
-              </li>
+            
             </ul>
           </div>
 
@@ -85,12 +67,17 @@ export default function Footer() {
                   MS Project Training
                 </Link>
               </li>
+              <li>
+                <Link href="#" className="hover:text-blue-400 transition-colors">
+                  Plan, Schedule, Monitor and Control Projects
+                </Link>
+              </li>
               
             </ul>
           </div>
 
           {/* Newsletter */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-medium mb-6">Subscribe to our newsletter</h3>
             <div className="relative">
               <input
@@ -102,7 +89,7 @@ export default function Footer() {
                 <Send className="h-5 w-5" />
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

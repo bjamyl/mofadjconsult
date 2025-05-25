@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 
 // import required modules
-import { EffectCards } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 // Services.tsx
 export default function Services() {
   return (
@@ -46,9 +46,15 @@ export default function Services() {
             listNumber={4}
             title="MS Project Training"
           />
+          <ServiceCard
+            alt="image"
+            imageDir="/ms.jpg"
+            listNumber={5}
+            title="Plan, Schedule, Monitor and Control Projects"
+          />
         </div>
         <div className="hidden lg:block w-full max-w-[1280px]">
-          <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]}>
+          <Swiper navigation={true} modules={[Navigation]}>
             <SwiperSlide>
               <ServiceCard
                 alt="image"
@@ -79,6 +85,14 @@ export default function Services() {
                 imageDir="/ms.jpg"
                 listNumber={4}
                 title="MS Project Training"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ServiceCard
+                alt="image"
+                imageDir="/ms.jpg"
+                listNumber={5}
+                title="Plan, Schedule, Monitor and Control Projects"
               />
             </SwiperSlide>
           </Swiper>

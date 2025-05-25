@@ -1,87 +1,71 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Avatar } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import SubTitle from "./SubTitle"
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import SubTitle from "./SubTitle";
 
 interface Testimonial {
-  id: number
-  content: string
-  author: string
-  role: string
-  rating: number
-  image: string
+  id: number;
+  content: string;
+  author: string;
+  role: string;
+  rating: number;
+  image: string;
 }
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
     content:
-      "Their thorough market analysis and customized strategies helped us streamline our operations and improve our overall efficiency. We saw a significant increase in our bottom line and were able to make data-driven decisions that positively impacted our business. The consultants were not just advisors in our success",
-    author: "Burdee Nicolas",
-    role: "Sr. Executive",
+      "I am pleased to recommend Mofad-J Consult for their exceptional services in construction consultancy, particularly in the areas of project management, quantity surveying and supervison. Throughout the duration of our collaboration, Mofad-J Consult consistenttly demonstrated a high level of professionalism, technical expertise, and commitment to excellence Their team maintained clear and effective communication with all stakeholders, ensuring that project milestones were met without compromising on quality or budgetary constraints.",
+    author: "Mohammed-Zafarilahi Abdul-Wahid ",
+    role: "Land Economist",
     rating: 5,
     image: "/placeholder.svg?height=80&width=80",
   },
   {
     id: 2,
-    content:
-      "Our experience with Solvior has been nothing short of exceptional. From day one, their team demonstrated a deep understanding of our industry and quickly identified key areas for improvement. Their recommendations were not only innovative but also practical, leading to a substantial operational efficiency.",
-    author: "Esther Howard",
-    role: "Business Owner",
+    content:"Working with Mofadj Consult has been a professional and efficient experience. Their team brings a clear understanding of construction processes, excellent coordination, and a strong commitment to delivering quality outcomes. Throughout the project, they maintained good communication, kept timelines on track, and upheld high standards in both planning and execution. I confidently recommend Mofadj Consult to anyone in need of reliable and competent construction consultancy services.",
+    author: "Abdul-Wahab Abdulai",
+    role: "Quantity Surveyor",
     rating: 5,
     image: "/placeholder.svg?height=80&width=80",
   },
-  {
-    id: 3,
-    content:
-      "Working with this team transformed our approach to customer engagement. Their insights helped us develop strategies that resonated with our target audience, resulting in a 40% increase in customer retention within just six months.",
-    author: "Alex Morgan",
-    role: "Marketing Director",
-    rating: 5,
-    image: "/placeholder.svg?height=80&width=80",
-  },
-  {
-    id: 4,
-    content:
-      "The level of expertise and dedication shown by the consultants was remarkable. They took the time to understand our unique challenges and delivered solutions that were tailored specifically to our needs. The ROI on our investment has been tremendous.",
-    author: "Sarah Chen",
-    role: "CFO",
-    rating: 5,
-    image: "/placeholder.svg?height=80&width=80",
-  },
-]
+ 
+];
 
 export default function TestimonialSection() {
-  const [currentPage, setCurrentPage] = useState(0)
-  const testimonialsPerPage = 2
-  const totalPages = Math.ceil(testimonials.length / testimonialsPerPage)
+  const [currentPage, setCurrentPage] = useState(0);
+  const testimonialsPerPage = 2;
+  const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
 
   const handlePrevious = () => {
-    setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1))
-  }
+    setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
+  };
 
   const handleNext = () => {
-    setCurrentPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1))
-  }
+    setCurrentPage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
+  };
 
   const currentTestimonials = testimonials.slice(
     currentPage * testimonialsPerPage,
-    (currentPage + 1) * testimonialsPerPage,
-  )
+    (currentPage + 1) * testimonialsPerPage
+  );
 
   return (
     <section className="bg-gray-200 py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="flex items-center justify-center mb-5 lg:mb-10">
-            <SubTitle title="Testimonials"/>
+          <SubTitle title="Testimonials" />
         </div>
 
         <div className="flex items-center justify-between mb-12">
-          <h2 className="text-3xl lg:text-5xl font-bold text-defaultGreen">Listening to our clients</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold text-defaultGreen">
+            Listening to our clients
+          </h2>
           <div className="hidden md:flex space-x-2">
             <Button
               variant="outline"
@@ -106,15 +90,24 @@ export default function TestimonialSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {currentTestimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="bg-white p-8 rounded-lg shadow-sm">
+            <Card
+              key={testimonial.id}
+              className="bg-white p-8 rounded-lg shadow-sm"
+            >
               <div className="flex mb-6">
-                <Quote className="text-blue-500 h-12 w-12 flex-shrink-0" fill="currentColor" />
+                <Quote
+                  className="text-blue-500 h-12 w-12 flex-shrink-0"
+                  fill="currentColor"
+                />
               </div>
               <p className="text-gray-700 mb-8">{testimonial.content}</p>
               <div className="flex items-center">
                 <div className="relative">
                   <Avatar className="h-16 w-16 border-4 border-white">
-                    <img src={testimonial.image || "/placeholder.svg"} alt={testimonial.author} />
+                    <img
+                      src={testimonial.image || "/placeholder.svg"}
+                      alt={testimonial.author}
+                    />
                   </Avatar>
                   <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-0.5">
                     <div className="bg-blue-500 rounded-full w-3 h-3"></div>
@@ -125,7 +118,11 @@ export default function TestimonialSection() {
                     {Array.from({ length: 5 }).map((_, i) => (
                       <svg
                         key={i}
-                        className={`w-4 h-4 ${i < testimonial.rating ? "text-yellow-400" : "text-gray-300"}`}
+                        className={`w-4 h-4 ${
+                          i < testimonial.rating
+                            ? "text-yellow-400"
+                            : "text-gray-300"
+                        }`}
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -133,7 +130,9 @@ export default function TestimonialSection() {
                       </svg>
                     ))}
                   </div>
-                  <h4 className="font-bold text-gray-900">{testimonial.author}</h4>
+                  <h4 className="font-bold text-gray-900">
+                    {testimonial.author}
+                  </h4>
                   <p className="text-gray-500 text-sm">{testimonial.role}</p>
                 </div>
               </div>
@@ -145,7 +144,9 @@ export default function TestimonialSection() {
           {Array.from({ length: totalPages }).map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 mx-1 rounded-full ${currentPage === index ? "bg-blue-500" : "bg-blue-200"}`}
+              className={`w-3 h-3 mx-1 rounded-full ${
+                currentPage === index ? "bg-blue-500" : "bg-blue-200"
+              }`}
               onClick={() => setCurrentPage(index)}
               aria-label={`Go to testimonial page ${index + 1}`}
             />
@@ -153,5 +154,5 @@ export default function TestimonialSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
