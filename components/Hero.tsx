@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -16,7 +17,9 @@ export default function Hero() {
             MOFAD-J CONSULT delivers top-notch project management services
             tailored to your needs — from planning to execution.
           </p>
+          <Link href="/contact" >
           <Button className="my-6 bg-[#0D6970] font-bold rounded-full py-6 px-9">Book Appointment <ArrowUpRight size={20}/></Button>
+          </Link>
         </div>
         <Image src="/hero2.jpg" height={720} width={1280} alt="hero-image" className="rounded-xl xl:rounded-2xl" />
       </div>
