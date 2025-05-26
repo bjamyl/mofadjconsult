@@ -28,11 +28,11 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    content:"Working with Mofadj Consult has been a professional and efficient experience. Their team brings a clear understanding of construction processes, excellent coordination, and a strong commitment to delivering quality outcomes. Throughout the project, they maintained good communication, kept timelines on track, and upheld high standards in both planning and execution. I confidently recommend Mofadj Consult to anyone in need of reliable and competent construction consultancy services.",
+    content:"Working with Mofad-J Consult has been a professional and efficient experience. Their team brings a clear understanding of construction processes, excellent coordination, and a strong commitment to delivering quality outcomes. Throughout the project, they maintained good communication, kept timelines on track, and upheld high standards in both planning and execution. I confidently recommend Mofad-J Consult to anyone in need of reliable and competent construction consultancy services.",
     author: "Abdul-Wahab Abdulai",
     role: "Quantity Surveyor",
     rating: 5,
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/wahab.png",
   },
  
 ];

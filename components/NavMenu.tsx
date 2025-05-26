@@ -9,20 +9,22 @@ import {
 } from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
+import { Menu } from "lucide-react";
 
 export default function NavMenu() {
+
   return (
     <div className="xl:hidden">
       <Sheet>
-        <SheetTrigger>Menu</SheetTrigger>
+        <SheetTrigger><Menu size={45} className="text-defaultGreen"/></SheetTrigger>
         <SheetContent className="">
           <SheetHeader className="h-full">
             <SheetTitle>
               <Image
                 src="/mofadjconsult.png"
                 alt="logo"
-                height={70}
-                width={70}
+                height={100}
+                width={100}
               />
             </SheetTitle>
             <SheetDescription className="flex flex-col justify-between h-full">
@@ -33,8 +35,14 @@ export default function NavMenu() {
                   efficiency, and innovative problem-solving.
                 </p>
                 <ul className="mt-4 space-y-2 border-t text-2xl font-bold">
-                  <li className="mt-2"><Link href='/'>Home</Link> </li>
-                  <li className="">Services</li>
+                  <li className="mt-2">
+                    <Link href="/">Home</Link>{" "}
+                  </li>
+                  <li className="">
+                    <a href="#services" >
+                      Services
+                    </a>
+                  </li>
                   <li className="">
                     <Link href="/contact">Contact</Link>
                   </li>
@@ -54,9 +62,9 @@ export default function NavMenu() {
                   <p className="font-bold">Location</p>
                   <p className="text-sm">Tamale</p>
                 </div>
-                <p className="mt-4 text-xl border-b pb-1">Follow us</p>
+                <p className="mt-4 text-xl border-b pb-1">Follow Us On</p>
                 <div>
-                  <p className="text-lg">Facebook</p>
+                  <p className="text-sm">Facebook</p>
                 </div>
               </div>
             </SheetDescription>

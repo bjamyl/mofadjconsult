@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowUp, Facebook, Instagram, Linkedin, Send, Twitter } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -48,27 +49,27 @@ export default function Footer() {
             <h3 className="text-xl font-medium mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
+                <Link href="/#services" className="hover:text-blue-400 transition-colors">
                   Project Management Consulting
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
+                <Link href="/#services" className="hover:text-blue-400 transition-colors">
                   Procurement and Logistics
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
+                <Link href="/#services" className="hover:text-blue-400 transition-colors">
                   Quantity Survey Works
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
+                <Link href="/#services" className="hover:text-blue-400 transition-colors">
                   MS Project Training
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-blue-400 transition-colors">
+                <Link href="/#services" className="hover:text-blue-400 transition-colors">
                   Plan, Schedule, Monitor and Control Projects
                 </Link>
               </li>
@@ -90,6 +91,11 @@ export default function Footer() {
               </button>
             </div>
           </div> */}
+          <div>
+            <Link href='/'>
+            <Image src='/logo-white.png' height={200} width={200} alt="logo-white"/>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -100,18 +106,10 @@ export default function Footer() {
 
           <div className="flex items-center space-x-8">
             <div className="flex space-x-4">
-              <Link href="#" aria-label="Facebook" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
+              <Link href="#" aria-label="Facebook" className="text-gray-200 hover:text-white transition-colors">
+                <p>Follow us on Facebook</p>
               </Link>
-              <Link href="#" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link href="#" aria-label="Twitter" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </Link>
+              
             </div>
 
            

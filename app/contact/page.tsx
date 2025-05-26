@@ -12,7 +12,7 @@ export default function Contact() {
         height={720}
         width={1280}
         src="/phone.jpg"
-        className="border w-full h-[40vh] object-cover"
+        className="w-full h-[40vh] object-cover"
       />
       <div className="mx-6 xl:mx-auto xl:max-w-7xl mt-10">
         <div className="flex flex-col items-center justify-center text-center mb-10">

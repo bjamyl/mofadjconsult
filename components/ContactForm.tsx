@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
+import { toast } from "sonner";
 
 const contactFormSchema = z.object({
   fullName: z.string().min(2, {
@@ -51,7 +52,7 @@ export function ContactForm({ onSubmit, className = "" }: ContactFormProps) {
     },
   });
 
- async  function handleSubmit(values: ContactFormValues) {
+  async function handleSubmit(values: ContactFormValues) {
     console.log("Form submitted:", values);
     try {
       const response = await fetch("/api/send", {
@@ -77,11 +78,10 @@ export function ContactForm({ onSubmit, className = "" }: ContactFormProps) {
       form.reset();
 
       // Optional: Show success message to user
-      alert("Message sent successfully!");
+      toast.success("Message sent successfully!");
     } catch (error) {
-      console.error("Error sending message:", error);
       // Optional: Show error message to user
-      alert("Failed to send message. Please try again.");
+      toast.error("Failed to send message. Please try again later.");
     }
     // Reset form after submission
     form.reset();

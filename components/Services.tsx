@@ -9,13 +9,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
+import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper/modules";
 // Services.tsx
 export default function Services() {
   return (
-    <section className="pb-20 lg:pb-10">
+    <section id="services" className="pb-20 lg:pb-10">
       <div className="flex flex-col items-center pt-20 pb-32">
         <SubTitle title="Services" />
         <h3 className="mt-10 lg:mb-10 mb-5 mx-8 text-3xl text-center lg:text-5xl font-bold">
@@ -48,7 +49,7 @@ export default function Services() {
           />
           <ServiceCard
             alt="image"
-            imageDir="/ms.jpg"
+            imageDir="/planning.jpg"
             listNumber={5}
             title="Plan, Schedule, Monitor and Control Projects"
           />
@@ -90,7 +91,7 @@ export default function Services() {
             <SwiperSlide>
               <ServiceCard
                 alt="image"
-                imageDir="/ms.jpg"
+                imageDir="/planning.jpg"
                 listNumber={5}
                 title="Plan, Schedule, Monitor and Control Projects"
               />
