@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
     author: "Mohammed-Zafarilahi Abdul-Wahid ",
     role: "Land Economist",
     rating: 5,
-    image: "/placeholder.svg?height=80&width=80",
+    image: "/awaz.png",
   },
   {
     id: 2,

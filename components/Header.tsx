@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {  PhoneCall } from "lucide-react";
 import NavMenu from "./NavMenu";

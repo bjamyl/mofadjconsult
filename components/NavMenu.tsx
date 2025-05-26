@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Sheet,
@@ -10,13 +11,25 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import { usePathname } from "next/navigation"; // Add this import
 
 export default function NavMenu() {
+  const [openMenu, setOpenMenu] = React.useState(false);
+  const pathname = usePathname(); // Get current route
+
+  // Close menu when route changes
+  React.useEffect(() => {
+    setOpenMenu(false);
+  }, [pathname]);
+
+ 
 
   return (
     <div className="xl:hidden">
-      <Sheet>
-        <SheetTrigger><Menu size={45} className="text-defaultGreen"/></SheetTrigger>
+      <Sheet open={openMenu} onOpenChange={setOpenMenu}>
+        <SheetTrigger>
+          <Menu size={45} className="text-defaultGreen" />
+        </SheetTrigger>
         <SheetContent className="">
           <SheetHeader className="h-full">
             <SheetTitle>
@@ -36,19 +49,33 @@ export default function NavMenu() {
                 </p>
                 <ul className="mt-4 space-y-2 border-t text-2xl font-bold">
                   <li className="mt-2">
-                    <Link href="/">Home</Link>{" "}
+                    <Link href="/" onClick={() => setOpenMenu(false)}>
+                      Home
+                    </Link>
                   </li>
                   <li className="">
-                    <a href="#services" >
+                    <Link 
+                      href="/#services" 
+                      onClick={() => {
+                        setOpenMenu(false);
+                      }}
+                      scroll={false}
+                    >
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li className="">
-                    <Link href="/contact">Contact</Link>
+                    <Link 
+                      href="/contact" 
+                      onClick={() => setOpenMenu(false)}
+                    >
+                      Contact
+                    </Link>
                   </li>
                 </ul>
               </div>
-              <div>
+              {/* Rest of your content remains the same */}
+                 <div>
                 <p className="mt-4 text-2xl border-b pb-1">Contact Info</p>
                 <div className="flex flex-col">
                   <p className="font-bold">Phone</p>
