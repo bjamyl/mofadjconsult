@@ -22,7 +22,7 @@ export default function ServiceCard({
       <div className="bg-defaultGreen bg-[url('/bgg.jpg')] bg-blend-multiply  bg-cover bg-center  p-6 lg:p-16 h-1/2 lg:h-full">
         <p className="text-white text-lg">
           {listNumber}
-          <span className="pt-3 text-gray-400 text-sm">/4</span>
+          <span className="pt-3 text-gray-400 text-sm">/5</span>
         </p>
         <h4 className="my-5 text-2xl md:text-4xl text-white font-bold">
           {title}
