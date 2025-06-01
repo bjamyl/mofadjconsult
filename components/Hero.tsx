@@ -41,9 +41,9 @@ export default function Hero() {
                 },
               }}
             >
-              <span className="text-[#0D6970]">Expert Consulting</span>
-              <span className="text-[#0D6970]">Project Scheduling</span>
-              <span className="text-[#0D6970]">Quantity Surveying</span>
+              <span className="text-[#0D6970]">Expert <br className="md:hidden"/> Consulting</span>
+              <span className="text-[#0D6970]">Project <br className="md:hidden"/> Scheduling</span>
+              <span className="text-[#0D6970]">Quantity <br className="md:hidden"/> Surveying</span>
               <span className="text-[#0D6970]">Construction <br /> Expertise</span>
 
             </TextLoop>
