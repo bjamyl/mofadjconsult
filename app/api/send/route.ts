@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const { fullName, email, phoneNumber, message } = body;
 
     const { data, error } = await resend.emails.send({
-      from: 'Mofad-J Consult <onboarding@resend.dev>', 
+      from: 'Mofad-J Consult <mofad@mofadjconsult.com>', 
       to: ['mofad@mofadjconsult.com'],
       subject: `New contact form submission from ${fullName}`,
       html: `

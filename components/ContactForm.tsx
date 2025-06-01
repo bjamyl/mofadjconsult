@@ -82,6 +82,7 @@ export function ContactForm({ onSubmit, className = "" }: ContactFormProps) {
     } catch (error) {
       // Optional: Show error message to user
       toast.error("Failed to send message. Please try again later.");
+      console.log(error)
     }
     // Reset form after submission
     form.reset();
