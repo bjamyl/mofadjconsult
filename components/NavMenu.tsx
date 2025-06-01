@@ -79,7 +79,7 @@ export default function NavMenu() {
                 <p className="mt-4 text-2xl border-b pb-1">Contact Info</p>
                 <div className="flex flex-col">
                   <p className="font-bold">Phone</p>
-                  <p className="text-sm">020-123-4567</p>
+                  <p className="text-sm">+233-552-515-269</p>
                 </div>
                 <div className="flex flex-col">
                   <p className="font-bold">Email</p>
