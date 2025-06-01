@@ -2,6 +2,7 @@ import React from "react";
 import SubTitleWhite from "./SubTitleWhite";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
+import { TextEffect } from "./motion-primitives/text-effect";
 
 export default function Company() {
   const headings = [
@@ -34,14 +35,21 @@ export default function Company() {
         </div>
         <div>
           <SubTitleWhite title="Our Company" />
-          <h3 className="mt-10 text-3xl text-white text-left lg:text-5xl font-bold">
-            Building Lasting <br /> Change in Industry
-          </h3>
+
+          <TextEffect
+            className="mt-10 text-3xl text-white text-left lg:text-5xl font-bold"
+            per="word"
+            as="h3"
+            preset="slide"
+          >
+            Building Lasting Change in Industry
+          </TextEffect>
+
           <p className=" mt-10 text-slate-200">
             MOFAD-J CONSULT is a project management consultancy firm dedicated
             to delivering top notch quality and exceptional services to our
             clients. With expertise in construction management, project
-            management, engineering and project scheduling tools (MS Project and
+            management, engineering and project scheduling tools (Microsoft Project and
             Primavera P6), we provide innovative solutions to complex projects
             challenges and also provide MS Project training.
           </p>

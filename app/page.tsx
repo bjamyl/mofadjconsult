@@ -1,5 +1,6 @@
 import Company from "@/components/Company";
 import Hero from "@/components/Hero";
+import OurTeam from "@/components/OurTeam";
 import Services from "@/components/Services";
 import TestimonialSection from "@/components/Testimonials";
 import WhyUs from "@/components/WhyUs";
@@ -12,6 +13,7 @@ export default function Home() {
     <WhyUs/>
     <Company/>
     <Services/>
+    <OurTeam/>
     <TestimonialSection/>
    </div>
   );

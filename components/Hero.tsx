@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { TextLoop } from "./motion-primitives/text-loop";
 
 export default function Hero() {
   return (
@@ -11,17 +12,59 @@ export default function Hero() {
         <div>
           <h1 className=" text-4xl md:text-5xl xl:text-6xl font-bold">
             Maximize Project Success with{" "}
-            <span className="text-[#0D6970]">Expert Consulting</span>
+            <TextLoop
+              className="overflow-y-clip"
+              transition={{
+                type: "spring",
+                stiffness: 900,
+                damping: 80,
+                mass: 10,
+              }}
+              variants={{
+                initial: {
+                  y: 20,
+                  rotateX: 90,
+                  opacity: 0,
+                  filter: "blur(4px)",
+                },
+                animate: {
+                  y: 0,
+                  rotateX: 0,
+                  opacity: 1,
+                  filter: "blur(0px)",
+                },
+                exit: {
+                  y: -20,
+                  rotateX: -90,
+                  opacity: 0,
+                  filter: "blur(4px)",
+                },
+              }}
+            >
+              <span className="text-[#0D6970]">Expert Consulting</span>
+              <span className="text-[#0D6970]">Project Scheduling</span>
+              <span className="text-[#0D6970]">Quantity Surveying</span>
+              <span className="text-[#0D6970]">Construction <br /> Expertise</span>
+
+            </TextLoop>
           </h1>
           <p className="mt-4 xl:text-lg">
             MOFAD-J CONSULT delivers top-notch project management services
             tailored to your needs — from planning to execution.
           </p>
-          <Link href="/contact" >
-          <Button className="my-6 bg-[#0D6970] font-bold rounded-full py-6 px-9">Book Appointment <ArrowUpRight size={20}/></Button>
+          <Link href="/contact">
+            <Button className="my-6 bg-[#0D6970] font-bold rounded-full py-6 px-9">
+              Book Appointment <ArrowUpRight size={20} />
+            </Button>
           </Link>
         </div>
-        <Image src="/hero2.jpg" height={720} width={1280} alt="hero-image" className="rounded-xl xl:rounded-2xl" />
+        <Image
+          src="/hero2.jpg"
+          height={720}
+          width={1280}
+          alt="hero-image"
+          className="rounded-xl xl:rounded-2xl"
+        />
       </div>
     </div>
   );

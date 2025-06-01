@@ -65,7 +65,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/#services" className="hover:text-blue-400 transition-colors">
-                  MS Project Training
+                  Microsoft Project Training
                 </Link>
               </li>
               <li>
