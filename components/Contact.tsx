@@ -5,11 +5,13 @@ const contactData: ContactInfo[] = [
     type: "email",
     title: "Email us",
     primaryInfo: "mofad@mofadjconsult.com",
+    actionHref: "mailto:mofad@mofadjconsult.com"
   },
   {
     type: "phone",
     title: "Call us",
     primaryInfo: "+233-552-515-269 ",
+    actionHref:"tel:+233552515269"
   },
   {
     type: "location",
@@ -21,7 +23,7 @@ const contactData: ContactInfo[] = [
     type: "chat",
     title: "Live WhatsApp chat",
     primaryInfo: "Talk to us directly on WhatsApp",
-    actionHref: "#chat",
+    actionHref: "https://wa.me/233552515269?text=Hello%20I%20have%20a%20question",
   },
 ];
 

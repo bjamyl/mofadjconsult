@@ -26,9 +26,9 @@ export default function Header() {
         </ul>
         <div className="hidden xl:flex items-center space-x-2 xl:space-x-4">
           <PhoneCall className="" />
-          <p >
+          <a href="tel:+233552515269" target="_blank" rel="noopener noreferrer">
             Call Us Now <br /> <span>+233-552-515-269</span>
-          </p>
+          </a>
         </div>
         <NavMenu/>
       </nav>
