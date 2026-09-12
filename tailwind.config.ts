@@ -9,8 +9,29 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+  			serif: ['var(--font-serif)', 'ui-serif', 'Georgia', 'serif'],
+  		},
+  		fontSize: {
+  			'step--1': 'var(--step--1)',
+  			'step-0': 'var(--step-0)',
+  			'step-1': 'var(--step-1)',
+  			'step-2': 'var(--step-2)',
+  			'step-3': 'var(--step-3)',
+  			'step-stat': 'var(--step-stat)',
+  		},
   		colors: {
 			defaultGreen:'#0D6970',
+			ink: 'var(--ink)',
+			slate: 'var(--slate)',
+			navy: 'var(--navy)',
+			'navy-deep': 'var(--navy-deep)',
+			steel: 'var(--steel)',
+			paper: 'var(--paper)',
+			line: 'var(--line)',
+			'muted-ink': 'var(--muted-ink)',
+			positive: 'var(--positive)',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -55,7 +76,13 @@ const config: Config = {
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
+  			sm: 'calc(var(--radius) - 4px)',
+  			'brand-sm': 'var(--r-sm)',
+  			'brand-md': 'var(--r-md)',
+  			'brand-lg': 'var(--r-lg)'
+  		},
+  		boxShadow: {
+  			elev: 'var(--elev)'
   		}
   	}
   },

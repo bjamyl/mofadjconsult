@@ -11,10 +11,10 @@
 @layer utilities {
   .clip-angular-top-curved-bottom {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
-}
+  }
   .clip-angular-top-curved-top {
     clip-path: polygon(0 9%, 100% 0%, 100% 100%, 0 100%);
-}
+  }
 }
 
 @layer base {
@@ -44,6 +44,32 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    /* --- Mofad-J design tokens (see mofad-j-redesign-spec.md §2) --- */
+    /* Brand accent restored to the logo's teal-green (was navy blue). */
+    --ink: #10141a;
+    --slate: #2b313b;
+    --navy: #0d6970;
+    --navy-deep: #0a3d42;
+    --steel: #3fa79d;
+    --paper: #f5f4f1;
+    --white: #ffffff;
+    --line: #e3e1db;
+    --muted-ink: #5b616b;
+    --positive: #2f6f4e;
+
+    --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+    --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --step-1: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    --step-2: clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem);
+    --step-3: clamp(2.4rem, 1.8rem + 2.6vw, 3.75rem);
+    --step-stat: clamp(3rem, 2rem + 5vw, 5.5rem);
+
+    --r-sm: 6px;
+    --r-md: 12px;
+    --r-lg: 20px;
+    --elev: 0 8px 28px -12px rgba(16, 20, 26, 0.18);
+    --section-pad: clamp(64px, 8vw, 128px);
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -79,5 +105,49 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+  :focus-visible {
+    outline: 2px solid var(--steel);
+    outline-offset: 2px;
+  }
+}
+
+.font-serif-display {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  background: var(--white);
+  color: var(--ink);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
